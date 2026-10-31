@@ -1,0 +1,6 @@
+{
+  "name": "Nandi Traders - Arecanut Buying & Processing",
+  "description": "Leading arecanut (supari) procurement, processing, and trading house in Sirsi, Karnataka. Premium grade betel nut processing, fair farmer prices, and reliable supply to top manufacturers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
