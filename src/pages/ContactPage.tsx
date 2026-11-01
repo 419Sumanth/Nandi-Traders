@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   MapPin,
   Phone,
@@ -9,28 +9,28 @@ import {
   Scale,
   Sparkles,
   ShieldCheck,
-} from 'lucide-react';
+} from "lucide-react";
 
 export const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    mail: '',
-    phone: '',
-    question: '',
+    name: "",
+    mail: "",
+    phone: "",
+    question: "",
   });
 
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-  const [errorMsg, setErrorMsg] = useState('');
+  const [errorMsg, setErrorMsg] = useState("");
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
-    if (errorMsg) setErrorMsg('');
+    if (errorMsg) setErrorMsg("");
   };
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -42,7 +42,7 @@ export const ContactPage: React.FC = () => {
       !formData.question.trim()
     ) {
       setErrorMsg(
-        'ದಯವಿಟ್ಟು ಎಲ್ಲಾ ವಿವರಗಳನ್ನು (ಹೆಸರು, ಇಮೇಲ್, ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಪ್ರಶ್ನೆ) ಭರ್ತಿ ಮಾಡಿ.'
+        "ದಯವಿಟ್ಟು ಎಲ್ಲಾ ವಿವರಗಳನ್ನು (ಹೆಸರು, ಇಮೇಲ್, ದೂರವಾಣಿ ಸಂಖ್ಯೆ ಮತ್ತು ಪ್ರಶ್ನೆ) ಭರ್ತಿ ಮಾಡಿ.",
       );
       return;
     }
@@ -55,9 +55,9 @@ export const ContactPage: React.FC = () => {
   };
 
   const handleReset = () => {
-    setFormData({ name: '', mail: '', phone: '', question: '' });
+    setFormData({ name: "", mail: "", phone: "", question: "" });
     setSubmitted(false);
-    setErrorMsg('');
+    setErrorMsg("");
   };
 
   return (
@@ -71,13 +71,22 @@ export const ContactPage: React.FC = () => {
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
-            ಸಂಪರ್ಕಿಸಿ (Contact Us)
+            ನಿಮ್ಮ ಗೋಟು  -   ನಮ್ಮ ರೇಟು
           </h1>
 
           {/* 6-8 Lines of Thank You & Invitation text strictly in Kannada */}
           <div className="rounded-3xl bg-white p-6 sm:p-8 border border-emerald-200/90 shadow-sm text-left sm:text-center">
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
-              ನಂದಿ ಟ್ರೇಡರ್ಸ್‌ನ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದ ಪ್ರತಿಯೊಬ್ಬ ಕೃಷಿಕ ಬಂಧುಗಳು ಹಾಗೂ ಕೈಗಾರಿಕಾ ಗ್ರಾಹಕರಿಗೆ ನಮ್ಮ ಹೃದಯಪೂರ್ವಕ ಧನ್ಯವಾದಗಳು. ನೀವು ನಿಮ್ಮ ತೋಟದ ಹಸಿ ಅಥವಾ ಒಣ ಅಡಿಕೆಯನ್ನು ಶಿರಸಿ ಎಪಿಎಂಸಿಯ ಗರಿಷ್ಠ ಹರಾಜು ದರದಲ್ಲಿ ಮಾರಾಟ ಮಾಡಲು ಬಯಸುವ ಬೆಳೆಗಾರರಾಗಿರಲಿ, ಅಥವಾ ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಗ್ರೇಡೆಡ್ ಸುಪಾರಿಯನ್ನು ನಿಯಮಿತವಾಗಿ ಕೊಳ್ಳಲು ಇಚ್ಛಿಸುವ ಪ್ರಮುಖ ಪಾನ್ ಮಸಾಲಾ ಹಾಗೂ ಎಫ್‌ಎಂಸಿಜಿ ಸಂಸ್ಥೆಯಾಗಿರಲಿ—ನಮ್ಮ ಶಿರಸಿ ಕಚೇರಿಯ ಬಾಗಿಲು ನಿಮಗೆ ಸದಾ ತೆರೆದಿರುತ್ತದೆ. ಕೆಳಗಿನ ಸರಳ ಅರ್ಜಿಯ ಮೂಲಕ ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಅಥವಾ ಮಾರಾಟದ ವಿವರಗಳನ್ನು ಕಳುಹಿಸಿ ಅಥವಾ ನಮ್ಮ ಮಂಡಿ ಉಸ್ತುವಾರಿಗಳಿಗೆ ನೇರವಾಗಿ ಕರೆ ಮಾಡಿ. ಕಳೆದ ಮೂರೂವರೆ ದಶಕಗಳ ಪ್ರಾಮಾಣಿಕ ಕೃಷಿ ವಹಿವಾಟಿನ ಪರಂಪರೆಯೊಂದಿಗೆ ನಿಮ್ಮನ್ನು ಸ್ವಾಗತಿಸಲು ನಾವು ಸದಾ ಸಿದ್ಧರಿದ್ದೇವೆ.
+              ನಂದಿ ಟ್ರೇಡರ್ಸ್‌ನ ಜಾಲತಾಣಕ್ಕೆ ಭೇಟಿ ನೀಡಿದ ಪ್ರತಿಯೊಬ್ಬ ಕೃಷಿಕ ಬಂಧುಗಳು
+              ಹಾಗೂ ಕೈಗಾರಿಕಾ ಗ್ರಾಹಕರಿಗೆ ನಮ್ಮ ಹೃದಯಪೂರ್ವಕ ಧನ್ಯವಾದಗಳು. ನೀವು ನಿಮ್ಮ
+              ತೋಟದ ಹಸಿ ಅಥವಾ ಒಣ ಅಡಿಕೆಯನ್ನು ಶಿರಸಿ ಎಪಿಎಂಸಿಯ ಗರಿಷ್ಠ ಹರಾಜು ದರದಲ್ಲಿ
+              ಮಾರಾಟ ಮಾಡಲು ಬಯಸುವ ಬೆಳೆಗಾರರಾಗಿರಲಿ, ಅಥವಾ ಉತ್ತಮ ಗುಣಮಟ್ಟದ ಗ್ರೇಡೆಡ್
+              ಸುಪಾರಿಯನ್ನು ನಿಯಮಿತವಾಗಿ ಕೊಳ್ಳಲು ಇಚ್ಛಿಸುವ ಪ್ರಮುಖ ಪಾನ್ ಮಸಾಲಾ ಹಾಗೂ
+              ಎಫ್‌ಎಂಸಿಜಿ ಸಂಸ್ಥೆಯಾಗಿರಲಿ—ನಮ್ಮ ಶಿರಸಿ ಕಚೇರಿಯ ಬಾಗಿಲು ನಿಮಗೆ ಸದಾ
+              ತೆರೆದಿರುತ್ತದೆ. ಕೆಳಗಿನ ಸರಳ ಅರ್ಜಿಯ ಮೂಲಕ ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಅಥವಾ ಮಾರಾಟದ
+              ವಿವರಗಳನ್ನು ಕಳುಹಿಸಿ ಅಥವಾ ನಮ್ಮ ಮಂಡಿ ಉಸ್ತುವಾರಿಗಳಿಗೆ ನೇರವಾಗಿ ಕರೆ ಮಾಡಿ.
+              ಕಳೆದ ಮೂರೂವರೆ ದಶಕಗಳ ಪ್ರಾಮಾಣಿಕ ಕೃಷಿ ವಹಿವಾಟಿನ ಪರಂಪರೆಯೊಂದಿಗೆ ನಿಮ್ಮನ್ನು
+              ಸ್ವಾಗತಿಸಲು ನಾವು ಸದಾ ಸಿದ್ಧರಿದ್ದೇವೆ.
             </p>
           </div>
         </div>
@@ -99,7 +108,8 @@ export const ContactPage: React.FC = () => {
                       ನಿಮ್ಮ ವಿವರ ಅಥವಾ ಪ್ರಶ್ನೆಯನ್ನು ಕಳುಹಿಸಿ
                     </h2>
                     <p className="text-xs sm:text-sm text-slate-500">
-                      ನಮ್ಮ ಶಿರಸಿ ಮಂಡಿ ವಿಭಾಗವು ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ ಶೀಘ್ರವೇ ಮರುಸಂಪರ್ಕಿಸುತ್ತದೆ.
+                      ನಮ್ಮ ಶಿರಸಿ ಮಂಡಿ ವಿಭಾಗವು ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಪರಿಶೀಲಿಸಿ
+                      ಶೀಘ್ರವೇ ಮರುಸಂಪರ್ಕಿಸುತ್ತದೆ.
                     </p>
                   </div>
 
@@ -112,9 +122,16 @@ export const ContactPage: React.FC = () => {
                         ಧನ್ಯವಾದಗಳು, {formData.name} ಅವರೇ!
                       </h3>
                       <p className="text-sm text-slate-700 leading-relaxed max-w-md mx-auto">
-                        ನಿಮ್ಮ ವಿಚಾರಣೆಯು ನಮ್ಮ ಶಿರಸಿ ಎಪಿಎಂಸಿ ಕಚೇರಿಯಲ್ಲಿ ದಾಖಲಾಗಿದೆ. ಶೀಘ್ರದಲ್ಲೇ ನಮ್ಮ ಪ್ರತಿನಿಧಿಗಳು ನಿಮ್ಮ ದೂರವಾಣಿ ಸಂಖ್ಯೆ{' '}
-                        <strong className="text-emerald-900">{formData.phone}</strong> ಅಥವಾ{' '}
-                        <strong className="text-emerald-900">{formData.mail}</strong> ಗೆ ಕರೆ ಮಾಡಲಿದ್ದಾರೆ:
+                        ನಿಮ್ಮ ವಿಚಾರಣೆಯು ನಮ್ಮ ಶಿರಸಿ ಎಪಿಎಂಸಿ ಕಚೇರಿಯಲ್ಲಿ ದಾಖಲಾಗಿದೆ.
+                        ಶೀಘ್ರದಲ್ಲೇ ನಮ್ಮ ಪ್ರತಿನಿಧಿಗಳು ನಿಮ್ಮ ದೂರವಾಣಿ ಸಂಖ್ಯೆ{" "}
+                        <strong className="text-emerald-900">
+                          {formData.phone}
+                        </strong>{" "}
+                        ಅಥವಾ{" "}
+                        <strong className="text-emerald-900">
+                          {formData.mail}
+                        </strong>{" "}
+                        ಗೆ ಕರೆ ಮಾಡಲಿದ್ದಾರೆ:
                       </p>
                       <div className="p-3 bg-white rounded-xl border border-emerald-100 text-xs text-slate-600 italic text-left max-w-md mx-auto">
                         "{formData.question}"
@@ -142,7 +159,8 @@ export const ContactPage: React.FC = () => {
                           htmlFor="name"
                           className="block text-xs font-bold uppercase tracking-wider text-slate-700"
                         >
-                          ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು (Name) <span className="text-emerald-700">*</span>
+                          ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು (Name){" "}
+                          <span className="text-emerald-700">*</span>
                         </label>
                         <input
                           type="text"
@@ -163,7 +181,8 @@ export const ContactPage: React.FC = () => {
                             htmlFor="mail"
                             className="block text-xs font-bold uppercase tracking-wider text-slate-700"
                           >
-                            ಇಮೇಲ್ ವಿಳಾಸ (Mail) <span className="text-emerald-700">*</span>
+                            ಇಮೇಲ್ ವಿಳಾಸ (Mail){" "}
+                            <span className="text-emerald-700">*</span>
                           </label>
                           <input
                             type="email"
@@ -182,7 +201,8 @@ export const ContactPage: React.FC = () => {
                             htmlFor="phone"
                             className="block text-xs font-bold uppercase tracking-wider text-slate-700"
                           >
-                            ದೂರವಾಣಿ ಸಂಖ್ಯೆ (Ph No.) <span className="text-emerald-700">*</span>
+                            ದೂರವಾಣಿ ಸಂಖ್ಯೆ (Ph No.){" "}
+                            <span className="text-emerald-700">*</span>
                           </label>
                           <input
                             type="tel"
@@ -203,7 +223,8 @@ export const ContactPage: React.FC = () => {
                           htmlFor="question"
                           className="block text-xs font-bold uppercase tracking-wider text-slate-700"
                         >
-                          ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಅಥವಾ ಮಾರಾಟದ ವಿವರಗಳು (Question) <span className="text-emerald-700">*</span>
+                          ನಿಮ್ಮ ಪ್ರಶ್ನೆ ಅಥವಾ ಮಾರಾಟದ ವಿವರಗಳು (Question){" "}
+                          <span className="text-emerald-700">*</span>
                         </label>
                         <textarea
                           id="question"
@@ -265,9 +286,14 @@ export const ContactPage: React.FC = () => {
                       ನಂದಿ ಟ್ರೇಡರ್ಸ್ (NANDI TRADERS)
                     </p>
                     <p className="text-sm text-slate-700 leading-relaxed">
-                      ಪ್ಲಾಟ್ ನಂ. ೧೮, ೧೯, ೨೦ & ೨೧, ಎಪಿಎಂಸಿ ಮಾರುಕಟ್ಟೆ ಪ್ರಾಂಗಣ,<br />
-                      ಹುಬ್ಬಳ್ಳಿ – ಶಿರಸಿ ರಾಷ್ಟ್ರೀಯ ಹೆದ್ದಾರಿ (NH-766E),<br />
-                      <strong className="text-emerald-900 font-bold">ಶಿರಸಿ – ೫೮೧೪೦೧</strong>, ಉತ್ತರ ಕನ್ನಡ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ.
+                      ಪ್ಲಾಟ್ ನಂ. ೧೮, ೧೯, ೨೦ & ೨೧, ಎಪಿಎಂಸಿ ಮಾರುಕಟ್ಟೆ ಪ್ರಾಂಗಣ,
+                      <br />
+                      ಹುಬ್ಬಳ್ಳಿ – ಶಿರಸಿ ರಾಷ್ಟ್ರೀಯ ಹೆದ್ದಾರಿ (NH-766E),
+                      <br />
+                      <strong className="text-emerald-900 font-bold">
+                        ಶಿರಸಿ – ೫೮೧೪೦೧
+                      </strong>
+                      , ಉತ್ತರ ಕನ್ನಡ ಜಿಲ್ಲೆ, ಕರ್ನಾಟಕ.
                     </p>
                     <p className="text-xs text-slate-500 pt-1">
                       ಗುರುತು: ಕೇಂದ್ರ ತೂಕದ ಸೇತುವೆ & ಟಿಎಸ್‌ಎಸ್ ಗೇಟ್ ಎದುರುಗಡೆ
@@ -279,7 +305,9 @@ export const ContactPage: React.FC = () => {
                     <div className="flex items-start gap-3">
                       <Phone className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-xs text-slate-500 block">ಮಂಡಿ ಸಹಾಯವಾಣಿ (Office):</span>
+                        <span className="text-xs text-slate-500 block">
+                          ಮಂಡಿ ಸಹಾಯವಾಣಿ (Office):
+                        </span>
                         <a
                           href="tel:+918384226500"
                           className="text-slate-900 hover:text-emerald-700 font-mono font-bold"
@@ -292,7 +320,9 @@ export const ContactPage: React.FC = () => {
                     <div className="flex items-start gap-3">
                       <Phone className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-xs text-slate-500 block">ಮೊಬೈಲ್ & ವಾಟ್ಸಾಪ್ (Auctions):</span>
+                        <span className="text-xs text-slate-500 block">
+                          ಮೊಬೈಲ್ & ವಾಟ್ಸಾಪ್ (Auctions):
+                        </span>
                         <a
                           href="tel:+919448144520"
                           className="text-slate-900 hover:text-emerald-700 font-mono font-bold"
@@ -305,7 +335,9 @@ export const ContactPage: React.FC = () => {
                     <div className="flex items-start gap-3">
                       <Mail className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-xs text-slate-500 block">ಅಧಿಕೃತ ಇಮೇಲ್:</span>
+                        <span className="text-xs text-slate-500 block">
+                          ಅಧಿಕೃತ ಇಮೇಲ್:
+                        </span>
                         <a
                           href="mailto:contact@nanditraderssirsi.com"
                           className="text-slate-900 hover:text-emerald-700 font-medium"
@@ -318,9 +350,12 @@ export const ContactPage: React.FC = () => {
                     <div className="flex items-start gap-3">
                       <Clock className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                       <div>
-                        <span className="text-xs text-slate-500 block">ಕಾರ್ಯಾಚರಣೆಯ ಸಮಯ:</span>
+                        <span className="text-xs text-slate-500 block">
+                          ಕಾರ್ಯಾಚರಣೆಯ ಸಮಯ:
+                        </span>
                         <span className="text-slate-800 font-medium text-xs">
-                          ಸೋಮವಾರ – ಶನಿವಾರ: ಬೆಳಗ್ಗೆ ೮:೦೦ ರಿಂದ ಸಂಜೆ ೭:೩೦ (ಹರಾಜು ದಿನಗಳು)
+                          ಸೋಮವಾರ – ಶನಿವಾರ: ಬೆಳಗ್ಗೆ ೮:೦೦ ರಿಂದ ಸಂಜೆ ೭:೩೦ (ಹರಾಜು
+                          ದಿನಗಳು)
                         </span>
                       </div>
                     </div>
@@ -331,7 +366,10 @@ export const ContactPage: React.FC = () => {
                 <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-950 flex items-start gap-3">
                   <Scale className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                   <span className="leading-relaxed">
-                    <strong>ಸ್ಥಳದಲ್ಲೇ ತೂಕದ ಖಾತರಿ:</strong> ನಿಮ್ಮ ಲಾರಿ ಅಥವಾ ಪಿಕಪ್ ವಾಹನವನ್ನು ನೇರವಾಗಿ ನಮ್ಮ ಶಿರಸಿ ಎಪಿಎಂಸಿ ಅಂಗಳಕ್ಕೆ ತನ್ನಿ. ಕಂಪ್ಯೂಟರೀಕೃತ ತೂಕ, ತೇವಾಂಶ ಪರೀಕ್ಷೆ ಮತ್ತು ತಕ್ಷಣದ ಆರ್‌ಟಿಜಿಎಸ್ ಪಾವತಿ ರಸೀದಿ ಪಡೆಯಿರಿ.
+                    <strong>ಸ್ಥಳದಲ್ಲೇ ತೂಕದ ಖಾತರಿ:</strong> ನಿಮ್ಮ ಲಾರಿ ಅಥವಾ ಪಿಕಪ್
+                    ವಾಹನವನ್ನು ನೇರವಾಗಿ ನಮ್ಮ ಶಿರಸಿ ಎಪಿಎಂಸಿ ಅಂಗಳಕ್ಕೆ ತನ್ನಿ.
+                    ಕಂಪ್ಯೂಟರೀಕೃತ ತೂಕ, ತೇವಾಂಶ ಪರೀಕ್ಷೆ ಮತ್ತು ತಕ್ಷಣದ ಆರ್‌ಟಿಜಿಎಸ್
+                    ಪಾವತಿ ರಸೀದಿ ಪಡೆಯಿರಿ.
                   </span>
                 </div>
               </div>
